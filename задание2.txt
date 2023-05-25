@@ -1,0 +1,324 @@
+looka@LAPTOP-R90GQT7H MINGW64 ~/OneDrive/Рабочий стол/belove/task_2sk_2
+$ mkdir test3
+
+looka@LAPTOP-R90GQT7H MINGW64 ~/OneDrive/Рабочий стол/belove/task_2
+$ cd test3
+
+looka@LAPTOP-R90GQT7H MINGW64 ~/OneDrive/Рабочий стол/belove/task_2/test3
+$ touch file4.txt file5.txt file6.txt
+
+looka@LAPTOP-R90GQT7H MINGW64 ~/OneDrive/Рабочий стол/belove/task_2/test3
+$ echo row1 row2 row3 row4 | tee -a file*.txt
+row1 
+row2 
+row3 
+row4
+
+looka@LAPTOP-R90GQT7H MINGW64 ~/OneDrive/Рабочий стол/belove/task_2/test3
+$ cat file4.txt file5.txt file6.txt 
+row1 
+row2 
+row3 
+row4 
+row1 
+row2 
+row3 
+row4 
+row1 
+row2 
+row3 
+row4 
+
+looka@LAPTOP-R90GQT7H MINGW64 ~/OneDrive/Рабочий стол/belove/task_2/test3
+$ grep row2 file5.txt 
+row2 
+
+looka@LAPTOP-R90GQT7H MINGW64 ~/OneDrive/Рабочий стол/belove/task_2/test3
+$ grep -r row .
+./file4.txt:row1 
+./file4.txt:row2 
+./file4.txt:row3
+./file4.txt:row4
+./file5.txt:row1
+./file5.txt:row2
+./file5.txt:row3
+./file5.txt:row4
+./file6.txt:row1
+./file6.txt:row2
+./file6.txt:row3
+./file6.txt:row4
+
+looka@LAPTOP-R90GQT7H MINGW64 ~/OneDrive/Рабочий стол/belove/task_2/test3
+$ grep -c "row" file6.txt 
+4
+
+looka@LAPTOP-R90GQT7H MINGW64 ~/OneDrive/Рабочий стол/belove/task_2/test3
+$ cd ..
+
+looka@LAPTOP-R90GQT7H MINGW64 ~/OneDrive/Рабочий стол/belove/task_2
+$ find test3/ -name "file5.txt"
+test3/file5.txt
+
+looka@LAPTOP-R90GQT7H MINGW64 ~/OneDrive/Рабочий стол/belove/task_2
+$ find test3/ -name "file5.txt" -delete
+
+looka@LAPTOP-R90GQT7H MINGW64 ~/OneDrive/Рабочий стол/belove/task_2
+$ cd test3
+
+looka@LAPTOP-R90GQT7H MINGW64 ~/OneDrive/Рабочий стол/belove/task_2/test3
+$ ls
+file4.txt  file6.txt
+
+looka@LAPTOP-R90GQT7H MINGW64 ~/OneDrive/Рабочий стол/belove/task_2/test3
+$ echo test >> file4.txt
+
+looka@LAPTOP-R90GQT7H MINGW64 ~/OneDrive/Рабочий стол/belove/task_2/test3
+$ cat file4.txt
+row1 
+row2
+row3
+row4
+test
+
+looka@LAPTOP-R90GQT7H MINGW64 ~/OneDrive/Рабочий стол/belove/task_2/test3
+$ sed -i "s/test/fail/" file4.txt
+row1 
+row2
+row3
+row4
+fail
+
+looka@LAPTOP-R90GQT7H MINGW64 ~/OneDrive/Рабочий стол/belove/task_2/test3
+$ echo test >> file4.txt
+row1 
+row2
+row3
+row4
+fail
+test
+
+looka@LAPTOP-R90GQT7H MINGW64 ~/OneDrive/Рабочий стол/belove/task_2/test3 (К СОЖАЛЕНИЮ ЭТО ВСЕ ЧТО У МЕНЯ ОТОБРАЖАЕТСЯ:()
+$ ps aux
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+      285       1     285      11208  cons0     197609 12:44:14 /usr/bin/bash
+      748     285     748      11008  cons0     197609 14:23:38 /usr/bin/ps
+
+looka@LAPTOP-R90GQT7H MINGW64 ~/OneDrive/Рабочий стол/belove/task_2/test3
+$ kill 666
+bash: kill: (666) - No such process
+
+looka@LAPTOP-R90GQT7H MINGW64 ~/OneDrive/Рабочий стол/belove/task_2/test3
+$ ping artsiomrusau.com
+
+Обмен пакетами с artsiomrusau.com [185.215.4.92] с 32 байтами данных:
+Превышен интервал ожидания для запроса.
+Превышен интервал ожидания для запроса.
+Превышен интервал ожидания для запроса.
+Превышен интервал ожидания для запроса.
+
+Статистика Ping для 185.215.4.92:
+    Пакетов: отправлено = 4, получено = 0, потеряно = 4
+    (100% потерь)
+
+looka@LAPTOP-R90GQT7H MINGW64 ~/OneDrive/Рабочий стол/belove/task_2/test3
+$ ping -c 5 artsiomrusau.com
+
+ Обмен пакетами с artsiomrusau.com [185.215.4.92] с 32 байтами данных:
+Ответ от 10.0.9.181: Превышен срок жизни (TTL) при передаче пакета.
+Ответ от 10.0.9.181: Превышен срок жизни (TTL) при передаче пакета.
+Ответ от 10.0.9.181: Превышен срок жизни (TTL) при передаче пакета.
+Ответ от 10.0.9.181: Превышен срок жизни (TTL) при передаче пакета.
+Ответ от 10.0.9.181: Превышен срок жизни (TTL) при передаче пакета.
+
+Статистика Ping для 185.215.4.92:
+    Пакетов: отправлено = 5, получено = 5, потеряно = 0
+    (0% потерь)
+
+looka@LAPTOP-R90GQT7H MINGW64 ~/OneDrive/Рабочий стол/belove/task_2/test3
+$  curl https://petstore.swagger.io/v2/pet/findByStatus?status=sold&status=available&status=pending
+[1] 904
+[2] 905
+[2]+ Done status=available
+[
+  {
+    "id": 444,
+    "category": {
+      "id": 767,
+      "name": "Nacibcg"
+    },
+    "name": "John",
+    "photoUrls": [
+      "caPJcYqk4",
+      "jsU",
+      "lQl1c2",
+      "eGRaMuA",
+      "2l85YN"
+    ],
+    "tags": [
+      {
+        "id": 131,
+        "name": "78cX"
+      },
+      {
+        "id": 363,
+        "name": "Mw2G1"
+      },
+      {
+        "id": 446,
+        "name": "keTq8D7J"
+      },
+      {
+        "id": 408,
+        "name": "ZMb0kw"
+      }
+    ],
+    "status": "sold"
+  },
+  {
+    "id": 886,
+    "category": {
+      "id": 833,
+      "name": "RuU"
+    },
+    "name": "John",
+    "photoUrls": [
+      "Uh3q",
+      "s3KBvp",
+      "T3HS",
+      "G5g7"
+    ],
+    "tags": [
+      {
+        "id": 929,
+        "name": "eFfxS"
+      },
+      {
+        "id": 135,
+        "name": "hafDfIDAl"
+      }
+    ],
+    "status": "sold"
+  },
+  {
+    "id": 13,
+    "category": {
+      "id": 0,
+      "name": "cats"
+    },
+    "photoUrls": [
+      "string"
+    ],
+    "tags": [
+      {
+        "id": 0,
+        "name": "string"
+      }
+    ],
+    "status": "sold"
+  },
+  {
+    "id": 9223372036854285000,
+    "category": {
+      "id": -29225102,
+      "name": "Excepteur fugiat ut in"
+    },
+    "name": "doggie",
+    "photoUrls": [
+      "officia quis co",
+      "sit Lore"
+    ],
+    "tags": [
+      {
+        "id": -9027978,
+        "name": "enim"
+      },
+      {
+        "id": -12646892,
+        "name": "dolor exercitation eu elit"
+      }
+    ],
+    "status": "sold"
+  },
+  {
+    "id": 9223372036854285000,
+    "category": {
+      "id": -38125463,
+      "name": "irure officia Excepteur a"
+    },
+    "name": "doggie",
+    "photoUrls": [
+      "mollit sint anim Excepteur",
+      "fugiat non nostrud amet"
+    ],
+    "tags": [
+      {
+        "id": 91190600,
+        "name": "velit aute"
+      },
+      {
+        "id": 83461469,
+        "name": "eiusmod sed deserunt proident"
+      }
+    ],
+    "status": "sold"
+  },
+  {
+    "id": 7574746,
+    "category": {
+      "id": 1,
+      "name": "Cat"
+    },
+    "name": "Hardy",
+    "photoUrls": [
+      "https://i.pinimg.com/originals/5c/2c/44/5c2c44f16da1caf134c00bc4f9c72ea0.jpg"
+    ],
+    "tags": [
+      {
+        "id": 7805,
+        "name": "Mainecoon"
+      }
+    ],
+    "status": "sold"
+  },
+  {
+    "id": 6,
+    "name": "MMlY",
+    "photoUrls": [
+      "me4m"
+    ],
+    "tags": [],
+    "status": "sold"
+  },
+  {
+    "id": 270,
+    "name": "Muhammad Navaid",
+    "photoUrls": [
+      "https://www.kaggle.com/mnavaidd"
+    ],
+    "tags": [],
+    "status": "sold"
+  }
+]
+
+looka@LAPTOP-R90GQT7H MINGW64 ~/OneDrive/Рабочий стол/belove/task_2/test3 (ПРЕДВАРИТЕЛЬНО БЫЛ СОЗДАН ФАЙЛ.json с НУЖНЫМ БАДИ и ПОМЕЩЕН В ДИРЕКТОРИЮ)
+$ curl -X POST --header "Content-Type: application/json" --header "Accept: application/json" -d @mypet.json "https://petstore.swagger.io/v2/pet"
+
+{
+  "id": 777,
+  "category": {
+    "id": 123,
+    "name": "test"
+  },
+  "name": "scooby-doo",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": "string"
+    }
+  ],
+  "status": "available"
+}
+
