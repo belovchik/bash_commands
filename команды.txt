@@ -1,0 +1,19 @@
+Я честно говоря не помню какие точно команды использовал, так как задание сделал не за один день
+
+Задание №1 
+В данном задании я использовал следующие команды (клонирование через зеркало)
+git clone --bare https://github.com/artichokeee/artichokeee 
+git push --mirror https://github.com/belovchik/belovchik
+
+Задание №2
+Все команды выполнял через терминал Visual Studio Code 
+Создал локальный репозиторий на компьютере с помощью команды (предварительно создав папку) git init 
+Далее использовал следующие команды для связи локального и удаленного репозитория
+(Предварительно переносил артефакты в Explorer Visual Studio Code)
+git status
+git add .
+git commit -m "new commit"
+git remote -v
+git remote add origin https://github.com/belovchik/repository_name
+git remote -v
+git push origin master 
